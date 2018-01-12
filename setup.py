@@ -10,20 +10,12 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-# get the dependencies and installs
-with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
-    all_reqs = f.read().split('\n')
-
-install_requires = [x.strip() for x in all_reqs if 'git+' not in x]
-dependency_links = [x.strip().replace('git+', '') for x in all_reqs if x.startswith('git+')]
-
 setup(
-    name='little_rpy',
+    name='little_r',
     version=__version__,
     description='Little_r format WRFDA tool',
     long_description=long_description,
-    url='https://github.com/tommz9/little_rpy',
-    download_url='https://github.com/tommz9/little_rpy/tarball/' + __version__,
+    url='https://github.com/tommz9/python-little_r',
     license='BSD',
     classifiers=[
       'Development Status :: 3 - Alpha',
@@ -31,10 +23,14 @@ setup(
       'Programming Language :: Python :: 3',
     ],
     keywords='',
-    packages=find_packages(exclude=['docs', 'tests*']),
+    package_dir={'': 'src'},
+    packages=['little_r'],
     include_package_data=True,
     author='Tomas Barton',
-    install_requires=install_requires,
-    dependency_links=dependency_links,
+    install_requires=[
+        'pytest',
+        'fortranformat',
+        'click'
+    ],
     author_email='tommz9@gmail.com'
 )
