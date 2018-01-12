@@ -28,7 +28,6 @@ setup(
     include_package_data=True,
     author='Tomas Barton',
     install_requires=[
-        'pytest',
         'fortranformat',
         'click'
     ],

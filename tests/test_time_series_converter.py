@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 from pandas.tseries.offsets import DateOffset
 
-from little_rpy import time_series_to_little_r
+from little_r import time_series_to_little_r
 
 class TimeSeriesTest(unittest.TestCase):
 
