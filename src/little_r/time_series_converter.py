@@ -2,7 +2,7 @@
 Functions for converting a time series to a little_r file.
 '''
 
-from .record_formats import Record
+from .record import Record
 
 def time_series_to_little_r(timestamps, data, station_id, lat, lon, height, variable, obs_filename, 
                             convert_to_kelvin=True):

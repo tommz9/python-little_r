@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime
 
-from little_r.record_formats import Record
+from little_r import Record
 
 class TestRecord(unittest.TestCase):
 

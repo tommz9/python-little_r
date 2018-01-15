@@ -136,6 +136,8 @@ class Record:
 
     The record is identified by name, lat, lon and time and can have several optional measurements.
 
+    Multiple measurements allow to enter measurements in several heights.
+
     Currently, only one measurement per record is supported
     '''
 
