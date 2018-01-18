@@ -29,7 +29,8 @@ setup(
     author='Tomas Barton',
     install_requires=[
         'fortranformat',
-        'click'
+        'click',
+        'arrow'
     ],
     author_email='tommz9@gmail.com'
 )
