@@ -141,8 +141,9 @@ class Record:
     Currently, only one measurement per record is supported
     '''
 
-    def __init__(self, station_name, plateform, lat, lon, height, time, **kwargs):
-        self.station_name = "%-40s"%station_name
+    def __init__(self, id, name, plateform, lat, lon, height, time, **kwargs):
+        self.id = "%-40s"%id
+        self.name = "%-40s"%name
         self.plateform = "%-40s"%plateform
         self.lat = lat
         self.lon = lon
@@ -240,8 +241,8 @@ class Record:
         data = [
             self.lat,  #                   station latitude (north positive)
             self.lon,  #                   station longitude (east positive)
-            self.station_name,  #                   string1 ID of station
-            '                                        ',  #                   string2 Name of station
+            self.id,  #                   string1 ID of station
+            self.name,  #                   string2 Name of station
             self.plateform,  #                   string3 Description of the measurement device
             '                                        ',  #                   string4 GTS, NCAR/ADP, BOGUS, etc.
             self.height,  #                   terrain elevation (m) --> 1f20.5
